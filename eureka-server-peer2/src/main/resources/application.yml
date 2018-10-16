@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: eureka-server-peer2
+server:
+  port: 10087
+eureka:
+  instance:
+    hostname: eureka-peer2
+  client:
+    service-url:
+      defaultZone: http://eureka-peer1:10086/eureka/
+  server:
+    eviction-interval-timer-in-ms: 20000
+    enable-self-preservation: false
+

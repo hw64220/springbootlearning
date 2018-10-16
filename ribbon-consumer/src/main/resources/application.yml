@@ -1,0 +1,34 @@
+spring:
+  application:
+    name: ribbon-consumer
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+
+server:
+  port: 9000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-peer1:10086/eureka, http://eureka-peer2:10087/eureka
+  instance:
+    lease-expiration-duration-in-seconds: 10
+    lease-renewal-interval-in-seconds: 5
+
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutinMilliseconds: lOOOO
+
+HELLO-SERVICE:
+  ribbon:
+    ConnectTimeout: 250
+    ReadTimeout: 1000
+    OkToRetryOnAllOperations: true
+    MaxAutoRetriesNextServer: 3
+    MaxAutoRetries: 2

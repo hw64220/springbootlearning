@@ -1,0 +1,19 @@
+spring:
+  profiles:
+    active: prod
+  application:
+    name: hello-service
+
+management:
+      endpoints:
+        web:
+          exposure:
+            include: "*"
+server:
+  port: 8880
+
+book:
+  name: SpringCloudInAction
+  author: Alex
+  desc: ${book.author} is writing ${book.name}
+

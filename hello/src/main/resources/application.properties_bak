@@ -1,0 +1,7 @@
+sprint.application.name=hello
+server.port=9001
+
+management.endpoints.web.exposure.include==["info", "health"]
+management.security.enabled=false
+
+server.error.whitelabel.enabled=false

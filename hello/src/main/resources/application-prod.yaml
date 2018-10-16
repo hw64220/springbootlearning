@@ -1,0 +1,19 @@
+server:
+  port: 8881
+
+eureka:
+  client:
+    healthcheck:
+      enabled: true
+    service-url:
+      defaultZone: http://eureka-peer1:10086/eureka
+  instance:
+    #hostname: "localhost"
+    lease-renewal-interval-in-seconds: 5
+    lease-expiration-duration-in-seconds: 8
+    instance-id: ${spring.application.name}_${random.int}
+    #status-page-url: https://${eureka.instance.hostname}/info
+    #health-check-url: https://${eureka.instance.hostname}/health
+    #home-page-url: https://${eureka.instance.hostname}/
+
+
