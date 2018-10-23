@@ -7,8 +7,12 @@ eureka:
   instance:
     hostname: eureka-peer1
   client:
+    register-with-eureka: false
+    fetch-registry: false
     service-url:
-      defaultZone: http://eureka-peer2:10087/eureka/
+      defaultZone: http://eureka-peer1:10086/eureka/
+    #service-url:
+      #defaultZone: http://eureka-peer2:10087/eureka/
   server:
-    eviction-interval-timer-in-ms: 10000
-    enable-self-preservation: false
+    #eviction-interval-timer-in-ms: 10000
+    #enable-self-preservation: false
