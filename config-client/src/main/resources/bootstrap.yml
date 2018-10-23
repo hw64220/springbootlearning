@@ -1,8 +1,10 @@
-spring:
-  application:
-    name: hello_master
-  cloud:
-    config:
-      profile: prod
-      label: master
-      uri: http://172.31.198.250:7001
+
+
+  spring:
+    application:
+      name: hello
+    cloud:
+      config:
+        profile: prod
+        label: develop
+        uri: http://127.0.0.1:7001

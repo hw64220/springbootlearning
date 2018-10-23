@@ -1,0 +1,19 @@
+server:
+  port: 7003
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@github.com:hw64220/config-server.git
+          #search-paths: /hello, /feign-consumer
+          username: hw64220
+          password: WHBcy19871103
+          uri: git@github.com:hw64220/config-server.git
+          search-paths: /hello
+          repos:
+            dev:
+              pattern: dev/*
+              uri:

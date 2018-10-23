@@ -9,11 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RefreshScope
 public class demoController {
 
-    @Value("${book.name}")
+   @Value("${book.name}")
     private String bookName;
+
+    @Value("${server.port}")
+    private String serverPort;
 
     @RequestMapping("/bookName")
     public Object getBookName() {
         return  this.bookName;
     }
+
+    @RequestMapping("/serverPort")
+    public Object getServerPost() {return  this.serverPort;}
 }
