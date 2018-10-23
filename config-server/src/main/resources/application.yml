@@ -1,0 +1,13 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: git@172.31.112.200:wanghb1/my-config-server.git
+          search-paths: /hello_master, /hello
+          username: wanghb1
+          password: wanghb1321
