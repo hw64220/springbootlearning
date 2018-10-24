@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: feign-consumer
+server:
+  port: 9999
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-peer1:10086/eureka
+
+feign:
+  client:
+    config:
+      hello-service:
+        connectTimeout: 2000
+        readTimeout: 8000
+        loggerLevel: basic
+
