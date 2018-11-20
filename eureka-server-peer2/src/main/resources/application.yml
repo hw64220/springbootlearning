@@ -8,7 +8,7 @@ eureka:
     hostname: eureka-peer2
   client:
     service-url:
-      defaultZone: http://eureka-peer1:10086/eureka/
+      defaultZone: http://eureka-peer1:10000/eureka/
   server:
     eviction-interval-timer-in-ms: 20000
     enable-self-preservation: false

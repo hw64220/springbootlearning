@@ -7,8 +7,9 @@ spring:
     config:
       server:
         git:
-          uri: git@172.31.112.200:wanghb1/my-config-server.git
+          uri: git@github.com:hw64220/config-server.git
           search-paths: /hello, /eureka-server, /hell_master, /feign_consumer
+
 
 
 

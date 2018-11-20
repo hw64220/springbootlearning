@@ -1,10 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-peer1:10087/eureka/, http://eureka-peer1:10000/eureka/
 
-
-  spring:
-    application:
-      name: hello
-    cloud:
-      config:
-        profile: prod
-        label: develop
-        uri: http://127.0.0.1:7001
+spring:
+  application:
+    name: hello
+  cloud:
+    config:
+      profile: prod
+      #单节点
+      label: master
+      uri: http://127.0.0.1:7001
+      #使用eureka
+      #discovery:
+       # enabled: true
+        #serviceId: config-server
